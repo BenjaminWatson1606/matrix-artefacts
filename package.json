@@ -1,9 +1,10 @@
 {
     "scripts": {
-        "build": "mkdir dist || true && copy src\\index.js dist\\output.js"
+        "build": "mkdirp dist && ncp src/index.js dist/output.js"
     },
     "devDependencies": {
         "copyfiles": "^2.4.1",
-        "mkdirp": "^3.0.1"
+        "mkdirp": "^3.0.1",
+        "ncp": "^2.0.0"
     }
 }
