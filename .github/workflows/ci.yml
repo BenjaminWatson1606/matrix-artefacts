@@ -47,6 +47,7 @@ jobs:
 
   conditional-job:
     if: github.ref == 'refs/heads/main'
+    needs: build-ubuntu-latest-18
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
